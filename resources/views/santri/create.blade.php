@@ -7,9 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Calon Santri</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-group label {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 20px;
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .form-control {
+            border: 2px solid #007bff; /* Blue border */
+            border-radius: 5px;        /* Rounded corners */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Light blue shadow */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .form-control:focus {
+            border-color: #0056b3; /* Darker blue when focused */
+            box-shadow: 0 0 8px rgba(0, 86, 179, 0.5); /* More pronounced shadow */
+        }
+    </style>
 </head>
-<body>
-    <div class="container mt-5">
+<body >
+    <div class="container mt-5" style="background-color: #f8f9fa;">
         <h1 class="mb-4">Tambah Calon Santri</h1>
         <form action="{{ route('santri.store') }}" method="POST">
             @csrf
